@@ -33,9 +33,16 @@ class Body extends StatelessWidget {
     var device = MediaQuery.of(context).size.height;
     return new Column(
       children: <Widget>[
-        new Container(
-            height: device / 2,
-            color: Colors.orange,
+        Container(
+          height: device / 2,
+          alignment: Alignment.center,
+          child: Text(
+            "31",
+            style: TextStyle(fontSize: 50),
+          ),
+        ),
+        Expanded(
+            flex: 1,
             child: Expanded(
                 flex: 1,
                 child: Row(
@@ -47,7 +54,7 @@ class Body extends StatelessWidget {
                         )),
                     Expanded(
                         flex: 1,
-                        child: new Text("2",
+                        child: new Text("21",
                             textAlign: TextAlign.center,
                             style: TextStyle(fontSize: 40)))
                   ],
