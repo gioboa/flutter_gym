@@ -18,20 +18,45 @@ class Home extends StatelessWidget {
           appBar: new AppBar(
             backgroundColor: Colors.red,
           ),
-          body: new Row(
-            children: <Widget>[
-              Expanded(flex: 1, child: Icon(Icons.play_arrow)),
-              Expanded(
-                  flex: 1,
-                  child: new Text("2",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(fontSize: 40)))
-            ],
-          ),
+          body: Body(),
           bottomNavigationBar: new Container(
             color: Colors.green,
             height: 50,
           )),
+    );
+  }
+}
+
+class Body extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var device = MediaQuery.of(context).size.height;
+    return new Column(
+      children: <Widget>[
+        new Container(
+            height: device / 2,
+            color: Colors.orange,
+            child: Expanded(
+                flex: 1,
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                        flex: 1,
+                        child: new Container(
+                          color: Colors.grey,
+                        )),
+                    Expanded(
+                        flex: 1,
+                        child: new Text("2",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(fontSize: 40)))
+                  ],
+                ))),
+        Expanded(
+            flex: 1,
+            child: new Text("2",
+                textAlign: TextAlign.center, style: TextStyle(fontSize: 40)))
+      ],
     );
   }
 }
