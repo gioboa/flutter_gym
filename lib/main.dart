@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gym/drawer.dart';
 
 void main() => runApp(Home());
 
@@ -14,12 +15,14 @@ class Home extends StatelessWidget {
           primaryTextTheme: TextTheme(
               title: TextStyle(color: Colors.black, fontFamily: "Aveny")),
           textTheme: TextTheme(title: TextStyle(color: Colors.black))),
-      home: new Scaffold(
-          appBar: new AppBar(
+      home: Scaffold(
+          appBar: AppBar(
+            title: Text("Flutter gym"),
             backgroundColor: Colors.red,
           ),
+          drawer: MyDrawer(),
           body: Body(),
-          bottomNavigationBar: new Container(
+          bottomNavigationBar: Container(
             color: Colors.green,
             height: 50,
           )),
