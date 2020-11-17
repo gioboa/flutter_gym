@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class WelcomePage extends StatelessWidget {
+class Welcome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,8 +10,9 @@ class WelcomePage extends StatelessWidget {
       ),
       body: Column(
         children: <Widget>[
+          Text("Welcome"),          
           ElevatedButton(
-            onPressed: () {
+            onPressed: () {              
               Navigator.pop(context);
             },
             child: Text('Go back!'),

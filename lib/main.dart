@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gym/drawer.dart';
+import 'package:flutter_gym/utils/drawer.dart';
 
 void main() => runApp(Home());
 
